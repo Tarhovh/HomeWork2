@@ -1,4 +1,3 @@
-
 let name = document.querySelector('#name');
 let phone = document.querySelector('#phone');
 let Birthday = document.querySelector('#birthday')
@@ -22,8 +21,6 @@ let btn = document.querySelector('input[type=button]');
 
 function showData(event) {
 
-  if (phone.validity.valid)
-  
     for (let i = 0; i < dataFields.length; i++) {
         switch (i) {
             case (0) : dataFields[i].textContent =  name.value; break;
@@ -52,7 +49,7 @@ function showData(event) {
     };
 };
 
-button.addEventListener('click', showData, false);
+form.addEventListener('submit', showData, false);
 
 btn.addEventListener('click', (e)=>{
     form.style.display = 'block'
